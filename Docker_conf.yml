@@ -10,15 +10,13 @@
  ignore_errors: yes
  
  - name: Remove existing image if present using docker command
- command: docker rmi manisha418/dockerimage
+ command: docker rmi manisha418/dockerimg
  ignore_errors: yes
 
  - name: Pull Docker image using docker command
- command: docker pull manisha418/dockerimage
-
+ command: docker pull manisha418/dockerimg
  - name: Run Docker container using docker command
- command: docker run -d -p 8080:8080 --name webapp manisha418/dockerimage
-
+ command: docker run -d -p 8080:8080 --name webapp manisha418/dockerimg
  - name: Check Docker container status using docker command
  command: docker ps -a
  register: container_status
